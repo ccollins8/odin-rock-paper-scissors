@@ -10,5 +10,34 @@
             return "Scissors";
         }
     }
+
+    function playRound(playerSelection,computerSelection = getComputerChoice()) {
+        if (playerSelection.toLowerCase() == "rock"
+        && computerSelection.toLowerCase() == "scissors") {
+            return "Rock beats scissors! You Won!"
+        }
+        else if (playerSelection.toLowerCase() == "rock"
+        && computerSelection.toLowerCase() == "paper") {
+            return "Paper beats rock. You Lose!"
+        } else if (playerSelection.toLowerCase() == "paper"
+        && computerSelection.toLowerCase() == "rock") {
+            return "Paper beats rock! You Won!"
+        }
+        else if (playerSelection.toLowerCase() == "paper"
+        && computerSelection.toLowerCase() == "scissors") {
+            return "Scissors beats paper. You Lose!"
+        } if (playerSelection.toLowerCase() == "scissors"
+        && computerSelection.toLowerCase() == "rock") {
+            return "Rock beats scissors! You Lose!"
+        }
+        else if (playerSelection.toLowerCase() == "scissors"
+        && computerSelection.toLowerCase() == "paper") {
+            return "Scissors beats paper. You Won!"
+        } else if (playerSelection.toLowerCase() == computerSelection.toLowerCase()) {
+            return "Draw!"
+        } else {
+            return "Incorrect input!"
+        }
+    }
     
 </script>
